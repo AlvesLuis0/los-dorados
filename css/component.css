@@ -1,0 +1,50 @@
+/*início dos componentes*/
+section h2 {
+    padding-top: 50px;
+    font-size: 30px;
+}
+
+.component {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 1%;
+    margin: 25px 50px 0px 0px;
+}
+
+.component a {
+    text-decoration: none;
+    color: #EBF0F0;
+}
+
+
+/*início dos cards*/
+.card {
+    padding-bottom: 30px;
+}
+
+.card:hover {
+    background-color: #270021;
+    transition: all 0.4s ease 0s;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card h3 {
+    font-size: 20px;
+}
+
+.card p {
+    color: #ccc
+}
+
+.card .stars {
+    color: #FF0
+}
+
+.card .price {
+    color: #EBF0F0;
+    font-weight: bold;
+    font-size: 18px;
+}
