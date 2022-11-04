@@ -11,15 +11,13 @@ let lists = document.querySelectorAll(".add");
 lists[0].addEventListener("click", () => button("add", "overview"));
 lists[1].addEventListener("click", () => button("add", "include"));
 
-for(let i of document.querySelectorAll(".remove"))
-{
+for(let i of document.querySelectorAll(".remove")) {
     i.addEventListener("click", () => button("remove", i));
 }
 
 
 // funções de clique
-function button(what, where)
-{
+function button(what, where) {
     if(what == "remove") return where.parentElement.remove();
 
     else document.querySelector("#" + where).innerHTML += `
@@ -35,8 +33,7 @@ function button(what, where)
 }
 
 
-function onClick()
-{
+function onClick() {
     const form = [];
 
     for(let i of inputs.values())
@@ -50,4 +47,27 @@ function onClick()
     for(let i of document.querySelectorAll(".include-item")) form[9].push(i.value);
     
     if(form.length < 12) return;
+
+    const course = {};
+
+    let atributes = [
+        "title",
+        "subtitle",
+        "stars",
+        "ratings",
+        "students",
+        "creator",
+        "overview",
+        "image",
+        "price",
+        "include",
+        "url",
+        "topic"
+    ]
+    
+    for(let i of atributes) {
+        course[i] = form[atributes.indexOf(i)];
+    }
+
+    db.addCourse(new Course(course)).then(alert("Formulário Enviado!"));
 }

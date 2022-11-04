@@ -1,26 +1,24 @@
-class Course
-{
-    constructor(title, subtitle, stars, ratings, students, creator, overview, image, price, include, url, topic)
-    {
-        this.title = title;
-        this.subtitle = subtitle;
-        this.stars = stars;
-        this.ratings = ratings;
-        this.students = students;
-        this.creator = creator;
-        this.overview = overview;
-        this.image = image;
-        this.price = price;
-        this.include = include;
-        this.url = url;
-        this.topic = topic;
+class Course {
+    constructor(data) {
+        this.title = data.title;
+        this.subtitle = data.subtitle;
+        this.stars = data.stars;
+        this.ratings = data.ratings;
+        this.students = data.students;
+        this.creator = data.creator;
+        this.overview = data.overview;
+        this.image = data.image;
+        this.price = data.price;
+        this.include = data.include;
+        this.url = data.url;
+        this.topic = data.topic;
+        this.id = null;
     }
 
-    getCard()
-    {
+    getCard() {
         return `
         <div class="card">
-            <a href="/course.html?${this.id}">
+            <a href="/course.html?id=${this.id}">
                 <img src="${this.image}">
                 <h3>${this.title}</h3>
                 <p>${this.creator}</p>
@@ -33,8 +31,7 @@ class Course
         `
     }
 
-    getPage()
-    {
+    getPage() {
         return `
         
         `
