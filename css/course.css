@@ -1,0 +1,53 @@
+#content {
+    margin-left: 0;
+}
+
+#course {
+    margin-left: 12%;
+}
+
+#top {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: #EBF0F0;
+    color: #0E0B16;
+    padding-left: 12%;
+    padding-right: 40%;
+    padding-top: 3.2rem;
+    padding-bottom: 3.2rem;
+}
+
+#top h1 {
+    font-size: 250%;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+#top h2 {
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.data {
+    background-color: #0E0B16;
+    border-radius: 50px;
+    padding: 0.6rem;
+    display: grid;
+    width: 50%;
+    text-align: center;
+    grid-auto-flow: column;
+    margin-bottom: 20px;
+}
+
+.stars {
+    color: #FF0;
+}
+
+.ratings {
+    color: #FF7DFF;
+}
+
+.students {
+    color: #EBF0F0;
+}

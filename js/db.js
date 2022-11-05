@@ -4,7 +4,9 @@ import {
     getFirestore,
     collection,
     addDoc,
-    getDocs
+    getDocs,
+    getDoc,
+    doc
 } from 'https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js';
 
 
@@ -45,8 +47,13 @@ class DB {
         })
     }
 
-    async getCourse() {
-        //
+    async getCourse(id, callback, errorCallback) {
+        const ref = doc(this.db, "course", id);
+        const docSnap = await getDoc(ref);
+
+        if (docSnap.exists()) callback(docSnap.data());
+        
+        else errorCallback();
     }
 }
 

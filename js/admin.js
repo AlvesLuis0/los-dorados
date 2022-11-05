@@ -21,11 +21,11 @@ function button(what, where) {
     if(what == "remove") return where.parentElement.remove();
 
     else document.querySelector("#" + where).innerHTML += `
-    <div>
-        <br>
-        <input type="text" class="${where}-item">
-        <button class="remove">-</button>
-    </div>
+        <div>
+            <br>
+            <input type="text" class="${where}-item">
+            <button class="remove">-</button>
+        </div>
     `
 
     const aux = document.querySelectorAll(`#${where} > div > .remove`);

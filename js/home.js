@@ -19,13 +19,13 @@ for(let i of [
 ]) {
 
     content.innerHTML += `
-    <section id="${i}">
-        <h2>${i}</h2>
-        <!-- Componente que agrupa os cursos do mesmo tópico -->
-        <div class="component">
-            <!-- Cards contendo pequenos resumos sobre o curso -->
-        </div>
-    </section>
+        <section id="${i}">
+            <h2>${i}</h2>
+            <!-- Componente que agrupa os cursos do mesmo tópico -->
+            <div class="component">
+                <!-- Cards contendo pequenos resumos sobre o curso -->
+            </div>
+        </section>
     `
 }
 
