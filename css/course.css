@@ -2,20 +2,15 @@
     margin-left: 0;
 }
 
-#course {
-    margin-left: 12%;
-}
 
 #top {
-    position: absolute;
-    left: 0;
-    width: 100%;
     background-color: #EBF0F0;
     color: #0E0B16;
     padding-left: 12%;
     padding-right: 40%;
     padding-top: 3.2rem;
     padding-bottom: 3.2rem;
+    margin-bottom: 30px;
 }
 
 #top h1 {
@@ -28,6 +23,7 @@
     font-weight: 500;
     margin-bottom: 15px;
 }
+
 
 .data {
     background-color: #0E0B16;
@@ -50,4 +46,61 @@
 
 .students {
     color: #EBF0F0;
+}
+
+
+#bottom {
+    margin-left: 12%;
+    border: 1px solid #EBF0F0;
+    width: 43%;
+    padding: 15px 20px;
+}
+
+#bottom h2, .mini-desc h3 {
+    color: #FF7DFF;
+}
+
+#bottom li {
+    margin: 15px 20px;
+}
+
+
+#right {
+    border: 1px solid #FF7DFF;
+    position: absolute;
+    left: 65%;
+    width: 24rem;
+    z-index: 1010;
+    top: 130px;
+    background-color: #0E0B16;
+}
+
+#right img {
+    width: 24rem;
+}
+
+.mini-desc {
+    padding: 12px 15px;
+}
+
+.mini-desc > * {
+    margin-top: 20px;
+}
+
+.mini-desc h2 {
+    font-size: 38px;
+}
+
+.mini-desc button {
+    color: #0E0B16;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #FF7DFF;
+    border-radius: 0;
+    width: 100%;
+    padding: 15px 0px;
+}
+
+.mini-desc li {
+    margin: 15px 20px;
 }

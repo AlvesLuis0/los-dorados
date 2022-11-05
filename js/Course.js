@@ -32,21 +32,42 @@ class Course {
     }
 
     getPage() {
-        return `
-            <div id="course">
-                <div id="top">
-                    <h1>${this.title}</h1>
-                    <h2>${this.subtitle}</h2>
-                    <p class="data">
-                        <span class="stars">${this.stars} Estrelas</span>
-                        <span class="ratings">${this.ratings} Classificações</span>
-                        <span class="students">${this.students} Alunos</span>
-                    </p>
-                    <h2>Criado por ${this.creator}</h2>
-                </div>
+        let overviewList = "";
+        for(let i of this.overview) {
+            overviewList += `<li>${i}</li>`
+        }
 
-                <div>
-                    <h2>O que você irá aprender</h2>
+        let includeList = "";
+        for(let i of this.include) {
+            includeList += `<li>${i}</li>`
+        }
+
+        return `
+            <div id="top">
+                <h1>${this.title}</h1>
+                <h2>${this.subtitle}</h2>
+                <p class="data">
+                    <span class="stars">${this.stars} Estrelas</span>
+                    <span class="ratings">${this.ratings} Classificações</span>
+                    <span class="students">${this.students} Alunos</span>
+                </p>
+                <h2>Criado por ${this.creator}</h2>
+            </div>
+            <div id="bottom">
+                <h2>O que você irá aprender</h2>
+                <ul>
+                    ${overviewList}
+                </ul>
+            </div>
+            <div id="right">
+                <img src="${this.image}">
+                <div class="mini-desc">
+                    <h2>R$${this.price}</h2>
+                    <a href="${this.url}" target="_blank"><button>Compre agora</button></a>
+                    <h3>Esse curso inclui:</h3>
+                    <ul>
+                        ${includeList}
+                    </ul>
                 </div>
             </div>
         `
